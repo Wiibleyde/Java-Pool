@@ -1,5 +1,9 @@
 public class IsEven {
     public static boolean isEven(int a) {
-        return a%2 == 0 ? false : true;
+        if ((a % 2) == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
