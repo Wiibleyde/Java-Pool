@@ -8,6 +8,13 @@ public class WeddingComplex {
         for (String name : preferences2.keySet()) {
             preferencesIndex2.put(name, 0);
         }
+        // for (Map.Entry<String, List<String>> entry : preferences1.entrySet()) {
+        //     List<String> invertedList = new ArrayList<>();
+        //     for (int i = entry.getValue().size() - 1; i >= 0; i--) {
+        //         invertedList.add(entry.getValue().get(i));
+        //     }
+        //     entry.setValue(invertedList);
+        // }
         List<String> freeMen = new ArrayList<>(preferences1.keySet());
         while (!freeMen.isEmpty()) {
             String man = freeMen.get(0);
@@ -28,6 +35,12 @@ public class WeddingComplex {
                 }
             }
         }
-        return couples;
+        // revert couples
+        Map<String, String> revertedCouples = new HashMap<>();
+        for (Map.Entry<String, String> entry : couples.entrySet()) {
+            revertedCouples.put(entry.getValue(), entry.getKey());
+        }
+        return revertedCouples;
+        // return couples;
     }
 }
