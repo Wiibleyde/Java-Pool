@@ -14,7 +14,9 @@ public class FormatDate {
     }
 
     public static String formatIso(LocalTime time) {
-        return time == null ? null : time.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS"));
+        if (time == null) return null;
+        if (time.getNano() == 0) return time.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss"));
+        return time.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS"));
     }
 
 }
