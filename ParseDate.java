@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Locale;
 
 public class ParseDate {
     public static LocalDateTime parseIsoFormat(String stringDate) {
@@ -9,7 +10,7 @@ public class ParseDate {
     }
     public static LocalDate parseFullTextFormat(String stringDate) {   
         if (stringDate == null) return null;
-        return LocalDate.parse(stringDate, java.time.format.DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy"));
+        return LocalDate.parse(stringDate, java.time.format.DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.FRANCE));
     }
     public static LocalTime parseTimeFormat(String stringDate) {
         if (stringDate == null) return null;
