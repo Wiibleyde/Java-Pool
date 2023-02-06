@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Locale;
 
 public class FormatDate {
 
@@ -9,7 +10,7 @@ public class FormatDate {
     }
 
     public static String formatSimple(LocalDate date) {
-        return date.format(java.time.format.DateTimeFormatter.ofPattern("MMMM dd yy"));
+        return date.format(java.time.format.DateTimeFormatter.ofPattern("MMMM dd yy", Locale.ITALIAN));
     }
 
     public static String formatIso(LocalTime time) {
