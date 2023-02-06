@@ -23,6 +23,6 @@ public class ListSearchIndex {
                 indexes.add(i);
             }
         }
-        return indexes.isEmpty() || indexes == null ? null : indexes;
+        return indexes;
     }
 }
