@@ -12,9 +12,10 @@ public class ParseDate {
         return LocalDate.parse(stringDate, java.time.format.DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy"));
     }
     public static LocalTime parseTimeFormat(String stringDate) {
+        // 09 heures du soir, 07 minutes et 23 secondes
         if (stringDate == null) return null;
-        stringDate = stringDate.replace("du soir", "PM");
-        stringDate = stringDate.replace("du matin", "AM");
-        return LocalTime.parse(stringDate, java.time.format.DateTimeFormatter.ofPattern("hh 'heures du' a ',' mm 'minutes et' ss 'secondes'"));
+        stringDate = stringDate.replace("soir", "PM");
+        stringDate = stringDate.replace("matin", "AM");
+        return LocalTime.parse(stringDate, java.time.format.DateTimeFormatter.ofPattern("hh 'heures du' a',' mm 'minutes et' ss 'secondes'"));
     }
 }
