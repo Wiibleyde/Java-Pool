@@ -4,9 +4,9 @@ public class Chifoumi {
             case ROCK:
                 return ChifoumiAction.SCISSOR;
             case PAPER:
-                return ChifoumiAction.PAPER;
-            case SCISSOR:
                 return ChifoumiAction.ROCK;
+            case SCISSOR:
+                return ChifoumiAction.PAPER;
             default:
                 return ChifoumiAction.ROCK;
         }   
