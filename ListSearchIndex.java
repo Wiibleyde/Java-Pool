@@ -4,10 +4,10 @@ import java.util.List;
 
 public class ListSearchIndex {
     public static Integer findLastIndex(List<Integer> list, Integer value) {
-        return list.lastIndexOf(value);
+        return list.lastIndexOf(value) == -1 ? null : list.lastIndexOf(value);
     }
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
-        return list.indexOf(value);
+        return list.indexOf(value) == -1 ? null : list.indexOf(value);
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         List<Integer> indexes = new ArrayList<>();
