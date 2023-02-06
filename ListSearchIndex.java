@@ -14,14 +14,15 @@ public class ListSearchIndex {
         return list.indexOf(value) == -1 ? null : list.indexOf(value);
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
-        // if (list == null) return null;
-        // if (value == null) return null;
         List<Integer> indexes = new ArrayList<>();
+        if (list == null) {
+            return indexes;
+        }
         for (int i = 0; i < list.size(); ++i) {
             if (list.get(i).equals(value)) {
                 indexes.add(i);
             }
         }
-        return indexes == null ? null : indexes;
+        return indexes.isEmpty() || indexes == null ? null : indexes;
     }
 }
