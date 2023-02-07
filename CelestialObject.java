@@ -67,8 +67,7 @@ public class CelestialObject {
     }
 
     public static boolean equals(CelestialObject a, CelestialObject b) {
-        // equals(Object object) method which will return true if all properties of the object as parameters are equals to the current object.
-        return a.getX() == b.getX() && a.getY() == b.getY() && a.getZ() == b.getZ();
+        return a.getX() == b.getX() && a.getY() == b.getY() && a.getZ() == b.getZ() && a.getName().equals(b.getName());
     }
 
     public static int hashCode(CelestialObject a) {
