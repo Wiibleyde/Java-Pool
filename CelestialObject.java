@@ -61,4 +61,20 @@ public class CelestialObject {
     public static double getDistanceBetweenInKm(CelestialObject a, CelestialObject b) {
         return getDistanceBetween(a, b) * KM_IN_ONE_AU;
     }
+
+    public static String toString(CelestialObject a) {
+        return a.getName() + " is positioned at (" + a.getX() + ", " + a.getY() + ", " + a.getZ() + ")";
+    }
+
+    public static boolean equals(CelestialObject a, CelestialObject b) {
+        return a.getX() == b.getX() && a.getY() == b.getY() && a.getZ() == b.getZ();
+    }
+
+    public static int hashCode(CelestialObject a) {
+        return (int) (a.getX() + a.getY() + a.getZ());
+    }
+
+    public String toString() {
+        return toString(this);
+    }
 }
