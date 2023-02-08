@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class CelestialObject {
     public double x;
     public double y;
@@ -65,7 +67,7 @@ public class CelestialObject {
     @Override
     public String toString() {
         // return String.format("%s is positioned at (%f, %f, %f)", this.name, this.x, this.y, this.z);
-        return this.name + " is positioned at (" + this.x + ", " + this.y + ", " + this.z + ")";
+        return this.name + " is positioned at (" + String.format(Locale.US, "%.3f", this.x) + ", " + String.format(Locale.US, "%.3f", this.y) + ", " + String.format(Locale.US, "%.3f", this.z) + ")";
     }
 
     @Override
