@@ -6,19 +6,22 @@ public class CelestialObject {
     public double z;
     public String name;
     public static Integer KM_IN_ONE_AU = 150000000;
+    public int mass;
 
     public CelestialObject() {
         this.x = 0.0;
         this.y = 0.0;
         this.z = 0.0;
         this.name = "Soleil";
+        this.mass = 1;
     }
     
-    public CelestialObject(String name, double x, double y, double z) {
+    public CelestialObject(String name, double x, double y, double z, int mass) {
         this.x = x;
         this.y = y;
         this.z = z;
         this.name = name;
+        this.mass = mass;
     }
 
     public double getX() {
@@ -51,6 +54,10 @@ public class CelestialObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getMass() {
+        return this.mass;
     }
 
     public static double getDistanceBetween(CelestialObject a, CelestialObject b) {
