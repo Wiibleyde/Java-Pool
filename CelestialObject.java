@@ -64,7 +64,8 @@ public class CelestialObject {
 
     @Override
     public String toString() {
-        return String.format("%s is positioned at (%f, %f, %f)", this.name, this.x, this.y, this.z);
+        // return String.format("%s is positioned at (%f, %f, %f)", this.name, this.x, this.y, this.z);
+        return this.name + " is positioned at (" + this.x + ", " + this.y + ", " + this.z + ")";
     }
 
     @Override
