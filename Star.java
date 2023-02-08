@@ -1,6 +1,6 @@
 public class Star {
     public CelestialObject celestialObject;
-    public double magnitude;
+    private double magnitude;
 
     public Star() {
         this.celestialObject = new CelestialObject();
