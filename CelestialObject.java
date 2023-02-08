@@ -62,8 +62,9 @@ public class CelestialObject {
         return getDistanceBetween(a, b) * KM_IN_ONE_AU;
     }
 
-    public static String toString(CelestialObject a) {
-        return a.getName() + " is positioned at (" + a.getX() + ", " + a.getY() + ", " + a.getZ() + ")";
+    @Override
+    public String toString() {
+        return String.format("%s is positioned at (%f, %f, %f)", this.name, this.x, this.y, this.z);
     }
 
     @Override
