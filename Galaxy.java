@@ -37,9 +37,9 @@ public class Galaxy {
 
     public Map<String, String> computeMassRepartition() {
         Map<String, Double> massRepartition = new HashMap<>();
-        massRepartition.put("Star", 0.0);
-        massRepartition.put("Planet", 0.0);
         massRepartition.put("Other", 0.0);
+        massRepartition.put("Planet", 0.0);
+        massRepartition.put("Star", 0.0);
     
         for (CelestialObject celestialObject : this.celestialObjects) {
             if (celestialObject instanceof Star) {
