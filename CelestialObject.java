@@ -6,7 +6,7 @@ public class CelestialObject {
     public double z;
     public String name;
     public static Integer KM_IN_ONE_AU = 150000000;
-    public int mass;
+    private int mass;
 
     public CelestialObject() {
         this.x = 0.0;
@@ -58,6 +58,10 @@ public class CelestialObject {
 
     public int getMass() {
         return this.mass;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
     }
 
     public static double getDistanceBetween(CelestialObject a, CelestialObject b) {
