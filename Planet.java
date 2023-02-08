@@ -27,7 +27,7 @@ public class Planet extends CelestialObject {
 
     @Override
     public String toString() {
-        return String.format("%s orbits %s at a distance of %.3f AU", this.getName(), this.getCenterStar().getName(), this.getDistanceFromCenterStar());
+        return String.format("%s circles around %s at the %.3f AU", this.getName(), this.getCenterStar().getName(), this.getDistanceFromCenterStar());
     }
 
     @Override
