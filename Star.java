@@ -19,4 +19,8 @@ public class Star extends CelestialObject {
         this.magnitude = magnitude;
     }
     
+    @Override
+    public String toString() {
+        return String.format("%s shines at the %.3f magnitude", this.getName(), this.getMagnitude());
+    }
 }
