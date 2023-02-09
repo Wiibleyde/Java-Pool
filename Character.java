@@ -1,10 +1,11 @@
 public class Character {
-    private final Integer maxHealth = 100;
+    private final Integer maxHealth;
     private Integer currentHealth;
     private final String name;
 
     public Character(String name, Integer maxHealth) {
         this.name = name;
+        this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
     }
 
