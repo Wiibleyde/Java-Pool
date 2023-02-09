@@ -8,8 +8,7 @@ public class Monster extends Character {
     }
 
     public void takeDamage(int damage) {
-        int damageTaken = (int) Math.ceil(damage * 0.8);
-        this.currentHealth -= damageTaken;
+        this.currentHealth -= Math.floor(damage * 0.8);
     }
 
     @Override
