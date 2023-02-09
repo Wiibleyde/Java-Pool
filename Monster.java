@@ -13,6 +13,6 @@ public class Monster extends Character {
 
     @Override
     public String toString() {
-        return getCurrentHealth() > 0 ? getName() + " is a monster with " + getMaxHealth() + " HP" : getName() + " is a monster and is dead";
+        return getCurrentHealth() > 0 ? "<name> is a monster with <maxHealth> HP".replace("<name>", getName()).replace("<maxHealth>", String.valueOf(getMaxHealth())) : "<name> is a monster and is dead".replace("<name>", getName());
     }
 }
