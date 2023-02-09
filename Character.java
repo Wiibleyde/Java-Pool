@@ -56,7 +56,7 @@ public class Character {
 
     public static String printStatus() {
         String line = "------------------------------------------";
-        String title = "Characters currently fighting :";
+        String title = "Characters currently fighting : ";
         String characters = "";
         if (getAllCharacters().isEmpty()) {
             return line + "\nNobody's fighting right now !\n" + line;
