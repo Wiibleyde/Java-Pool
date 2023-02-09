@@ -1,11 +1,11 @@
 public class Monster extends Character {
-    public Monster(String name, int maxHealth) {
-        super(name, maxHealth);
+    public Monster(String name, int maxHealth, Weapon weapon) {
+        super(name, maxHealth, weapon);
     }
     
     @Override
     public void attack(Character character) {
-        character.takeDamage(7);
+        character.takeDamage(this.getWeapon().getDamage());
     }
 
     @Override
@@ -17,8 +17,10 @@ public class Monster extends Character {
 
     @Override
     public String toString() {
-        return (getCurrentHealth()<=0 ? "<name> is a monster and is dead" : "<name> is a monster with <currentHealth> HP")
+        String description = (getCurrentHealth()<=0 ? "<name> is a monster and is dead" : "<name> is a monster with <currentHealth> HP")
         .replace("<name>", getName())
         .replace("<currentHealth>", Integer.toString(this.getCurrentHealth()));
+        
+        return description + " He has the weapon " + this.getWeapon().getName() + " which deals " + this.getWeapon().toString() + ".";
     }
 }
