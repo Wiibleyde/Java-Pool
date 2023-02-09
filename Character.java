@@ -70,7 +70,9 @@ public class Character {
     public static Character fight(Character character1, Character character2) {
         while (character1.getCurrentHealth() > 0 && character2.getCurrentHealth() > 0) {
             character1.attack(character2);
-            character2.attack(character1);
+            if (character2.getCurrentHealth() > 0) {
+                character2.attack(character1);
+            }
         }
         if (character1.getCurrentHealth() == 0) {
             return character2;
