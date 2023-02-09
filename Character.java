@@ -62,7 +62,7 @@ public class Character {
             return line + "\nNobody's fighting right now !\n" + line;
         }
         for (Character character : getAllCharacters()) {
-            characters +=" - "+character.getName()+" : "+Integer.toString(character.currentHealth)+"/"+Integer.toString(character.maxHealth)+"\n";
+            characters +=" - "+character.toString()+"\n";
         }
         return line + "\n" + title + "\n" + characters +  line;
     }
