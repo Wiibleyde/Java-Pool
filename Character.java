@@ -64,7 +64,7 @@ public class Character {
         for (Character character : getAllCharacters()) {
             characters += " - " + character.toString() + "\n";
         }
-        return line + "\n" + title + "\n" + characters + line;
+        return line + "\n" + title + "\n" + characters + "\n" +  line;
     }
 
     public static Character fight(Character character1, Character character2) {
