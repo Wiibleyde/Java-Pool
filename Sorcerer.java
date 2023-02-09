@@ -10,6 +10,15 @@ public class Sorcerer extends Character implements Healer {
         return this.currentHealth;
     }
 
+    public void attack(Character character) {
+        this.heal(this);
+        character.takeDamage(10);
+    }
+
+    public void takeDamage(int damage) {
+        this.currentHealth -= damage;
+    }
+
     @Override
     public int getHealCapacity() {
         return healCapacity;

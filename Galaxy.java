@@ -47,12 +47,7 @@ public class Galaxy {
                 massRepartition.put("Other", massRepartition.get("Other") + celestialObject.getMass());
             }
         }
-    
-        // Map<String, String> formattedMassRepartition = new HashMap<>();
-        // for (Map.Entry<String, Double> entry : massRepartition.entrySet()) {
-        //     double value = entry.getValue();
-        //     formattedMassRepartition.put(entry.getKey(), value == (int) value ? Integer.toString((int) value) : Double.toString(value));
-        // }
+
         return massRepartition;
     }
         

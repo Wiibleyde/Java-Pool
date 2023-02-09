@@ -3,13 +3,14 @@ public class Monster extends Character {
         super(name, maxHealth);
     }
     
-    // @Override
-    // public String toString() {
-    //     if (this.getCurrentHealth() == 0) {
-    //         return this.getName() + " is a monster and is dead";
-    //     }
-    //     return this.getName() + " is a monster with " + this.getCurrentHealth() + " HP";
-    // }
+    public void attack(Character character) {
+        character.takeDamage(7);
+    }
+
+    public void takeDamage(int damage) {
+        int damageTaken = (int) Math.ceil(damage * 0.8);
+        this.currentHealth -= damageTaken;
+    }
 
     @Override
     public String toString() {
