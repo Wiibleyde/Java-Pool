@@ -12,11 +12,13 @@ public class Templar extends Character implements Healer, Tank {
         return healCapacity;
     }
 
+    @Override
     public void attack(Character character) {
         this.heal(this);
         character.takeDamage(6);
     }
 
+    @Override
     public void takeDamage(int damage) {
         int damageTaken = damage - this.shield;
         if (damageTaken < 0) {

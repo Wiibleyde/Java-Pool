@@ -3,10 +3,12 @@ public class Monster extends Character {
         super(name, maxHealth);
     }
     
+    @Override
     public void attack(Character character) {
         character.takeDamage(7);
     }
 
+    @Override
     public void takeDamage(int damage) {
         this.currentHealth -= Math.floor(damage * 0.8);
     }
