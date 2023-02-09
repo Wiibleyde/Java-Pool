@@ -1,19 +1,19 @@
 public class Character {
-    private final Integer maxHealth;
-    private Integer currentHealth;
+    private final int maxHealth;
+    private int currentHealth;
     private final String name;
 
-    public Character(String name, Integer maxHealth) {
+    public Character(String name, int maxHealth) {
         this.name = name;
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
     }
 
-    public Integer getMaxHealth() {
+    public int getMaxHealth() {
         return this.maxHealth;
     }
 
-    public Integer getCurrentHealth() {
+    public int getCurrentHealth() {
         return this.currentHealth;
     }
 
@@ -28,7 +28,7 @@ public class Character {
         return this.name + " : " + this.currentHealth + "/" + this.maxHealth;
     }
 
-    public void takeDamage(Integer damage) {
+    public void takeDamage(int damage) {
         if (this.currentHealth - damage < 0) {
             this.currentHealth = 0;
         } else {
