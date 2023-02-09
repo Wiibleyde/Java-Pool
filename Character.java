@@ -49,15 +49,19 @@ public class Character {
         allCharacters.add(character);
     }
 
+    public static List<Character> getAllCharacters() {
+        return allCharacters;
+    }
+
     public static String printStatus() {
         String line = "------------------------------------------";
         String title = "Characters currently fighting : ";
         String characters = "";
-        if (allCharacters.isEmpty()) {
+        if (getAllCharacters().isEmpty()) {
             return line + "\nNobody's fighting right now !\n" + line;
         }
-        for (Character character : allCharacters) {
-            characters += "- " + character.toString() + "\n";
+        for (Character character : getAllCharacters()) {
+            characters += " - " + character.toString() + "\n";
         }
         return line + "\n" + title + "\n" + characters + line;
     }
