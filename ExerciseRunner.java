@@ -1,13 +1,14 @@
 public class ExerciseRunner {
 
     public static void main(String[] args) {
-         Character aragorn = new Monster("Goblin", 30);
-         Monster slime = new Monster("Leviathan", 0);
+        Sorcerer gandalf = new Sorcerer("Gandalf", 20, 5);
+        Character frodon = new Character("Frodon", 20);
+        Sorcerer saroumane = new Sorcerer("saroumane", 10, 3);
 
-        System.out.println(Character.printStatus());
+        Character.fight(frodon, saroumane);
+        
+        gandalf.heal(frodon);
 
-         Character winner = Character.fight(aragorn, slime);
-        System.out.print(winner);
         System.out.println(Character.printStatus());
     }
 }
