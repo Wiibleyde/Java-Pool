@@ -54,17 +54,21 @@ public class Character {
         return allCharacters;
     }
 
+    // public static String printStatus() {
+    //     String line = "------------------------------------------";
+    //     String title = "Characters currently fighting : ";
+    //     String characters = "";
+    //     if (getAllCharacters().isEmpty()) {
+    //         return line + "\nNobody's fighting right now !\n" + line;
+    //     }
+    //     for (Character character : getAllCharacters()) {
+    //         characters += " - " + character.toString() + "\n";
+    //     }
+    //     return line + "\n" + title + "\n" + characters +  line;
+    // }
+
     public static String printStatus() {
-        String line = "------------------------------------------";
-        String title = "Characters currently fighting : ";
-        String characters = "";
-        if (getAllCharacters().isEmpty()) {
-            return line + "\nNobody's fighting right now !\n" + line;
-        }
-        for (Character character : getAllCharacters()) {
-            characters += " - " + character.toString() + "\n";
-        }
-        return line + "\n" + title + "\n" + characters +  line;
+        return getAllCharacters().isEmpty() ? "------------------------------------------\nNobody's fighting right now !\n------------------------------------------" : "------------------------------------------\nCharacters currently fighting : \n" + getAllCharacters().stream().map(character -> " - " + character.toString() + "\n").reduce("", String::concat) + "------------------------------------------";
     }
 
     public static Character fight(Character character1, Character character2) {
