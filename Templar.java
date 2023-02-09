@@ -24,7 +24,7 @@ public class Templar extends Character implements Healer, Tank {
         if (damageTaken < 0) {
             damageTaken = 0;
         }
-        this.currentHealth = Math.max(0, this.currentHealth - damageTaken);
+        this.currentHealth = Math.max(this.currentHealth - damageTaken, 0);
     }
 
     @Override
