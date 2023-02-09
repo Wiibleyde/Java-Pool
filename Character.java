@@ -40,9 +40,9 @@ public abstract class Character {
         return this.name + " : " + this.currentHealth + "/" + this.maxHealth;
     }
 
-    public abstract void takeDamage(int damage);
+    public abstract void takeDamage(int damage) throws DeadCharacterException;
 
-    public abstract void attack(Character character);
+    public abstract void attack(Character character) throws DeadCharacterException;
 
     public void addCharacter(Character character) {
         allCharacters.add(character);
@@ -61,9 +61,17 @@ public abstract class Character {
 
     public static Character fight(Character character1, Character character2) {
         while (character1.getCurrentHealth() > 0 && character2.getCurrentHealth() > 0) {
-            character1.attack(character2);
+            try {
+                character1.attack(character2);
+            } catch (DeadCharacterException e) {
+                System.out.println(e.getMessage());
+            }
             if (character2.getCurrentHealth() > 0) {
-                character2.attack(character1);
+                try {
+                    character2.attack(character1);
+                } catch (DeadCharacterException e) {
+                    System.out.println(e.getMessage());
+                }
             }
         }
         if (character1.getCurrentHealth() == 0) {
