@@ -18,7 +18,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void takeDamage(int damage) {
-        this.currentHealth -= damage;
+        this.currentHealth = Math.max(this.currentHealth-damage, 0);
     }
 
     @Override
